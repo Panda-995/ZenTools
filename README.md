@@ -125,3 +125,29 @@ python -m http.server 8080
 - 网站：[zentools.xyz](https://zentools.xyz)
 - GitHub：[LANGTAOSHA-prog/ZenTools](https://github.com/LANGTAOSHA-prog/ZenTools)
 - 隐私政策：[zentools.xyz/privacy.html](https://zentools.xyz/privacy.html)
+
+---
+
+## Docker 部署
+
+公开镜像同时支持 `linux/amd64` 和 `linux/arm64`：
+
+```bash
+docker pull ghcr.io/panda-995/zentools:latest
+docker run -d --name zentools --restart unless-stopped -p 8080:80 \
+  ghcr.io/panda-995/zentools:latest
+```
+
+也可以直接使用仓库中的 Compose 文件：
+
+```bash
+docker compose up -d
+```
+
+启动后访问 `http://localhost:8080`。如需更换宿主机端口，例如 `9000`：
+
+```bash
+ZENTOOLS_PORT=9000 docker compose up -d
+```
+
+每次推送到 `main` 或创建 `v*.*.*` 标签时，GitHub Actions 都会自动构建并发布双架构镜像。

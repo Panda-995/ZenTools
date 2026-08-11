@@ -1,0 +1,20 @@
+services:
+  zentools:
+    image: ghcr.io/panda-995/zentools:latest
+    container_name: zentools
+    restart: unless-stopped
+    init: true
+    ports:
+      - "${ZENTOOLS_PORT:-8080}:80"
+    read_only: true
+    tmpfs:
+      - /var/cache/nginx
+      - /var/run
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/healthz"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s

@@ -1,0 +1,17 @@
+.git
+.github
+.gitignore
+.monkeycode
+.atomcode
+.venv
+__pycache__
+*.bak
+*.bat
+*.md
+*.ps1
+*.py
+*.pyc
+*.sh
+Dockerfile
+compose.yaml
+pdf_tools
