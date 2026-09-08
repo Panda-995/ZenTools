@@ -1,13 +1,13 @@
 {
   "source": "中国银行 (Bank of China)",
   "sourceUrl": "https://www.boc.cn/sourcedb/whpj/",
-  "fetchedAt": "2026-09-08 14:27:11",
-  "publishedAt": "2026/09/08 14:21:40",
+  "fetchedAt": "2026-09-08 19:40:32",
+  "publishedAt": "2026/09/08 19:36:41",
   "currency": "JPY",
   "quoteUnit": "100 JPY",
   "refRate": 4.3706,
-  "buyRate": 4.35,
-  "sellRate": 4.3836,
+  "buyRate": 4.3336,
+  "sellRate": 4.3671,
   "cnyToJpy": 22.8802,
   "jpyToCny100": 4.3706
 }
